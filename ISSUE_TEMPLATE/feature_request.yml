@@ -1,0 +1,34 @@
+name: Özellik önerisi
+description: Yeni bir özellik veya iyileştirme önerin.
+title: "[Öneri]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fikrinizi mümkün olduğunca kullanım senaryosuyla birlikte açıklayın.
+  - type: textarea
+    id: need
+    attributes:
+      label: İhtiyaç
+      description: Hangi problemi çözmeye çalışıyorsunuz?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Önerilen çözüm
+      description: Özelliğin nasıl çalışmasını bekliyorsunuz?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatifler
+      description: Denediğiniz veya düşündüğünüz alternatif çözümler varsa yazın.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Kontrol
+      options:
+        - label: Aynı veya benzer bir önerinin daha önce açılmadığını kontrol ettim.
+          required: true
