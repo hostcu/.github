@@ -1,0 +1,54 @@
+name: Hata bildirimi
+description: Tekrarlanabilir bir problemi bildirin.
+title: "[Hata]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bildirim için teşekkürler. Lütfen aşağıdaki alanları mümkün olduğunca eksiksiz doldurun.
+        Güvenlik açıklarını burada paylaşmayın; SECURITY.md dosyasını kullanın.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Ne oldu ve ne olmasını bekliyordunuz?
+      placeholder: Problemi açık ve kısa şekilde anlatın.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Yeniden üretme adımları
+      description: Sorunu tekrar oluşturmak için gereken adımları yazın.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Sürüm / commit
+      placeholder: v1.2.0 veya commit SHA
+  - type: input
+    id: environment
+    attributes:
+      label: Ortam
+      description: İşletim sistemi, PHP/Python/Node sürümü, panel veya ilgili bileşenler.
+      placeholder: Ubuntu 24.04, PHP 8.3, cPanel...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log / hata çıktısı
+      description: Gizli verileri temizledikten sonra ilgili çıktıyı ekleyin.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Kontrol
+      options:
+        - label: Aynı konuyla ilgili mevcut issue'ları kontrol ettim.
+          required: true
+        - label: Paylaştığım içerikte parola, token veya müşteri verisi bulunmuyor.
+          required: true
